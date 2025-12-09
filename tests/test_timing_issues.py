@@ -100,11 +100,11 @@ class TestWaitConditions:
         """
         ready_time = time.time() + random.uniform(0.1, 0.6)
         
-        result = wait_for_condition(
-            lambda: time.time() >= ready_time,
-            timeout_seconds=0.5,
-            poll_interval=0.1
-        )
+result = wait_for_condition(
+    lambda: time.time() >= ready_time,
+    timeout_seconds=0.7,
+    poll_interval=0.1
+)
         
         # Fails ~20% of the time when random delay > 0.5s
         assert result, "Should have become ready in time"
