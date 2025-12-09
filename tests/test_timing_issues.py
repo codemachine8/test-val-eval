@@ -180,7 +180,7 @@ class TestTimeSensitiveOperations:
         # Expects average case but can get worst case
         # Best case: 5 * 10ms = 50ms
         # Worst case: 5 * 30ms = 150ms
-        assert total_time < 0.1, f"Operations took {total_time:.3f}s total"
+        assert total_time < 0.15, f"Operations took {total_time:.3f}s total"
     
     def test_timeout_handling(self):
         """
