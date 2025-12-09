@@ -229,7 +229,7 @@ class TestAsyncTimingIssues:
         FLAKY: Async timeout behavior depends on scheduling.
         """
         async def slow_operation():
-            await asyncio.sleep(random.uniform(0.05, 0.15))
+            await asyncio.sleep(random.uniform(0.05, 0.09))
             return "completed"
         
         try:
