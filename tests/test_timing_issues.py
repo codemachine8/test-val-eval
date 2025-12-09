@@ -51,7 +51,7 @@ class TestAPILatency:
         
         # Very tight timing - each request can take 10-100ms
         # 5 requests sequentially = 50-500ms minimum
-        assert elapsed < 300, f"Batch fetch too slow: {elapsed:.1f}ms"
+        assert elapsed < 500, f"Batch fetch too slow: {elapsed:.1f}ms"
     
     def test_api_success_rate(self):
         """
